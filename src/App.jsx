@@ -7,12 +7,12 @@ import Addproduct from './Components/Addproduct'
 import ProductList from './Components/ProductList'
 import { useContext } from 'react'
 import { ModeContext } from './Components/ContextModeStat'
-import AdminGuard from './AdminGurde'
+
 function App() {
  const ContextValue=useContext(ModeContext)
 
   return (
-    <AdminGuard>
+
     <div className={`bg-bgColorGray dark:bg-DbgColorGray min-h-screen w-screen pb-3 text-generalText dark:text-DgeneralText ${ContextValue.mode}`}>
     <MyNavbar/>
     <Bar/>
@@ -24,7 +24,7 @@ function App() {
        <Route index element={<ProductList/>}/>
     </Routes>
     </div>
-    </AdminGuard>
+ 
   )
 }
 
