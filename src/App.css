@@ -1,0 +1,35 @@
+/* في ملف index.css أو app.css */
+
+@import "tailwindcss";
+
+@layer components {
+  .btn-blue {
+    @apply py-2 px-4 bg-blue-500 text-white rounded;
+  } /* <--- أغلق القوس هنا */
+
+  /* افتح تعريف جديد لحالة :hover */
+  .btn-blue:hover {
+    @apply bg-blue-700;
+  }
+}/* هاد لدمج عدة كلاسات بكلاس وواحد */
+@theme {
+  --color-bgColorGray: oklch(0.939 0 0); /*لون الخلفية رمادي*/
+  --color-bgColorWhite: oklch(1 0 0);/*لون الخلفية ابيض*/
+  --color-textColorGray: oklch(0.705 0.0035 17.24); /*لون النص رمادي*/
+  --color-textColorWhite: oklch(1 0 0);/*لون النص ابيض*/
+  --color-foucsColorSky: oklch(74.6% 0.16 232.66);/*لون الفوكس لحقل الأدخال*/
+  --color-errorColorRed: oklch(0.628 0.2577 29.23);/*لون الايرور*/
+  --color-generalText:oklch(0 0 0);/*النص بشكل عام*/
+}
+@custom-variant dark (&:where(.dark, .dark *));
+
+ @theme { /*دارك مود */
+     --color-DgeneralText: oklch(0.95 0 0);
+    --color-DbgColorGray: oklch(0.19 0.01 255); 
+    --color-DbgColorDark: oklch(0.26 0.01 255);
+    --color-DtextColorGray: oklch(0.70 0.01 255);
+    --color-DtextColorWhite: oklch(0.95 0 0);
+    --color-DfoucsColorSky: oklch(74.6% 0.16 232.66);
+    --color-DerrorColorRed: oklch(0.68 0.26 29.23);
+    
+  }
